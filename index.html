@@ -71,7 +71,7 @@
         margin-top:-66.5vh;
     }
 
-    .stab1{
+    .stab1, .stab2, .stab3{
         background-color:white;
         text-align:center;
         font-size:12px;
@@ -81,12 +81,12 @@
     table{
         border-collapse: collapse
     }
-    .stab1 td, th{
+    .stab1, .stab2, .stab3, td, th{
         border:1px solid black;        
         padding:0px;
     }
 
-    .stab1{
+    .stab1, .stab2, .stab3{
         width:31%;
     }
 
@@ -158,7 +158,7 @@
 
 
 
-        <!-- Text boxes Lane1-->
+<!-- Side Lane1  starts here--> 
            <div class="side-lane1">
                <div>
                    <textarea  class="l1-textarea" rows=6 cols=52 style="">
@@ -180,7 +180,7 @@
                
         <!-- Lane 1 table starts-->       
 
-               <table  class="stab1"style="background-color:white">
+               <table  class="stab1" >
                    <tr>
                        <th>Job</th>
                        <th>Duration</th>
@@ -202,16 +202,131 @@
                        <td contenteditable="true">5:02:11</td>
                    </tr>
                </table>
+
+               <!----->
+
+               <table class="stab2" contenteditable="true" >
+                    <tr>
+                       <td rowspan="3">DC</td>
+                       <td rowspan="3">Stores</td>
+                      <td colspan="4">SAP pick ticket generation</td>
+                      <td colspan="3">IWS pick ticket Bridging</td>
+                      
+                    </tr>
+                    
+                    <tr>
+                      <td>Time of</td>
+                      <td>Time of</td>
+                      <td rowspan="2">Pick ticket couts</td>
+                      <td rowspan="2">Pick ticket couts</td>
+                      <td>Time of</td>
+                      <td>Time of</td>
+                      <td rowspan="2">Pick ticket couts</td>
+                    </tr>
+                    
+                    <tr>
+                      <td>Start </td>
+                      <td>Completion </td>
+                      <td>Start </td>
+                      <td>Completion </td>
+                    </tr>
+                    
+                    <tr>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                    </tr>
+                  </table>
+                   
+             <!---->          
+             
+
            </div>
         <!---->
 
+        <!-- Lane 1 but no borders-->
+        <div class="bottables">
+            &nbsp
+             <table class="stab3"  contenteditable="true" style="width:36%">
+                     <tr>
+                       <th>Systems</th> <th>PW5</th> <th>PS7</th> <th>PF7</th>
+                       <th>PS1</th> <th>PW1</th> <th>PC7</th> <th>PC9</th>
+                       <th>PG0</th> <th>PG1</th> <th>PJA</th> <th>PR7</th>
+                       <th>PR8</th> <th>PWM</th> 
+                       
+                       
+                     </tr>
+                     
+                     <tr>
+                       <th>Cancelled Jobs</th> <td>NA</td> <td>1</td> <td>2</td>
+                       <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                       <td>7</td> <td>8</td> <td>9</td> <td>10</td>
+                       <td>11</td> <td>12</td> 
+                       
+                     </tr>
+                     
+                     <tr>
+                       <th>ABAB Dumps</th> <td>NA</td> <td>1</td> <td>2</td>
+                       <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                       <td>7</td> <td>8</td> <td>9</td> <td>10</td>
+                       <td>11</td> <td>12</td> 
+                       
+                     </tr>
+                     
+                   </table>
+ 
+ 
+ 
+                   <div>
+                         <textarea class="l1-textarea" rows=4 cols=66>
+      
+                         </textarea>
+                     </div>
+        </div>
+ 
+ <!--     Side lane one ends here-->
+ <!-- side lane2 begins-->
 
-    </div>
+         <div class="lane2">
+                <div>
+                        <textarea class="l1-textarea" rows=6 cols=66>
+                                HPSM Incidents
+                        HPSM: Backlog as of 09:00 EST - 98
+                               • Focus on Incident #<=2 #>2 #>5, #>14, #>21 and #>30
+                               • Count as on 02/20 was: 197
+                               • Tickets transferred to TCS Inbox : 17
+                               • Incident closed in last 2 days  : 225
+                        </textarea>
+                </div>
+
+         </div>
+ <!--Side lane 2 ends-->
+     
+            
+   
+
+
+
+
+
+    </div><!--main div end-->
+
+    
+
+
+
     <!--
     <script>
             document.getElementById("redone").addEventListener('click',colorchanger);
             function colorchanger(){
-                console.log('event listener working');
+                console.log
+                ('event listener working');
                 this.style.backgroundColor="red";
             }
           </script>
