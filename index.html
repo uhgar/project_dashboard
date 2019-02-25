@@ -1,5 +1,179 @@
+<!DOCTYPE html>
 <head>
+    <title>SAP Dashboard</title>
+    <style>
+      
+     body{
+         background-color:black;
+     }
+      .sbot0, .sbot1, .sbot2, .sbot3,.sbot4, .sbot5, .sbot6{
+           padding:0px 20px 0px 20px;
+      }
+
+    
+     .bot0, .bot1, .bot2, .bot3,.bot4, .bot5, .bot6{
+         display:inline-block;
+         
+         width:90px;
+         height:90px;
+         line-height:normal;
+         border-radius:50%;
+         text-align:center;
+         text-decoration:none;
+         background-color:blue;
+         color:white;
+         font-size:15px;
+         font-weight:bold;
+           
+     }
+
+     .dot{
+         width:15px;
+         height:15px;
+         background-color:red;
+         border-radius:50%;
+         display:inline-block;
+     }
+
+
+     .pbot0{
+         width : 90px;
+         height : 70px;
+         background-color:blue;
+         color:white;
+         border-radius:10%;
+         line-height:1.3rem;
+         text-align:center;
+         text-decoration:none;
+         font-size:11px;
+         font-weight:bold;
+
+     }
+
+     .pbot0.sbadjust{
+         height:90px;
+     }
+
+     .psbot0{
+         padding:5px 0px 5px 0px;
+     }
+
+
+    .l1-textarea{
+        resize:none;
+        border-radius:10px;
+        text-align:left;
+        line-height:normal;
+    }
+
+    .side-lane1{
+        margin-left:95px;
+        margin-top:-66.5vh;
+    }
+
+    
+
+
+    </style>
+
+<script>
+
+
+</script>
+    
+
 </head>
 <body>
-    Test Page
+    <!-- paren div-->
+    <div>
+
+
+        <!-- top buttons-->
+        <div id="top-buttons">
+            <span class="sbot0">   <button class="bot0" type="button" disabled=true>ERP<br>  <span class="dot"> </span></button>   </span>
+            <span class="sbot1">  <button class="bot1" type="button"  disabled=true>BI<br>  <span class="dot"> </span></button>   </span> 
+            <span class="sbot2">  <button class="bot2" type="button"  disabled=true>F&R<br>  <span class="dot"> </span></button>  </span>
+            <span class="sbot3">  <button class="bot3" type="button"  disabled=true>CAR<br>  <span class="dot"> </span></button>  </span>
+            <span class="sbot4">  <button class="bot4" type="button"  disabled=true>EFI<br>  <span class="dot"> </span></button>  </span>
+            <span class="sbot5">  <button class="bot5" type="button"  disabled=true>CCI<br>  <span class="dot"> </span></button>  </span>
+            <span class="sbot6">  <button class="bot6" type="button"  disabled=true>GTS<br>  <span class="dot"> </span></button>  </span>
+
+           
+        </div>
+        <!-- xxxx -->
+
+
+        <!-- Side buttons starts-->
+        <div id="side-buttons">
+            <div class="psbot0 "> <button class="pbot0 sbadjust" type="button"> F&R <br> 
+                    <span class="dot"> </span><br>
+                    <span>SLA</span> 
+                   </button> 
+            </div>
+
+
+            <div class="psbot0"> <button class="pbot0" type="button"> BI <br> 
+                     <span class="dot"> </span><br>
+                     <span>SLA</span> 
+                 </button> 
+            </div>
+
+          <div class="psbot0"> <button class="pbot0" type="button"> COM <br> 
+                   <span class="dot"> </span><br>
+               </button> 
+          </div>
+
+          <div class="psbot0"> <button class="pbot0" type="button"> F&R - MTR <br> 
+                 <span class="dot"> </span><br>
+                </button> 
+          </div>
+
+          <div class="psbot0"> <button class="pbot0" type="button"> PICK TICKET <br> 
+                  <span class="dot"> </span><br>
+                </button> 
+          </div>
+
+        </div>
+        <!-- xxxx-->
+
+
+
+        <!-- Text boxes Lane1-->
+           <div class="side-lane1">
+               <div>
+                   <textarea  class="l1-textarea" rows=6 cols=52 style="">
+
+                   </textarea>
+               </div>
+                 
+               <div>
+                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.4%">
+
+                   </textarea>
+               </div>
+
+               <div>
+                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.6%">
+
+                   </textarea>
+               </div>
+
+           </div>
+        <!---->
+
+
+    </div>
+    <!--
+    <script>
+            document.getElementById("redone").addEventListener('click',colorchanger);
+            function colorchanger(){
+                console.log('event listener working');
+                this.style.backgroundColor="red";
+            }
+          </script>
+
+
+          -->
 </body>
+
+</html>
