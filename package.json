@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/uhgar/project_dashboard#readme",
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "http-server": "^0.11.1"
   }
 }
