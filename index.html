@@ -4,7 +4,8 @@
     <title>SAP Dashboard</title>
     <style>
       
-     body{
+      body{
+        box-sizing: border-box;
          background-color:black;
      }
       .sbot0, .sbot1, .sbot2, .sbot3,.sbot4, .sbot5, .sbot6{
@@ -21,7 +22,7 @@
          border-radius:50%;
          text-align:center;
          text-decoration:none;
-         background-color:blue;
+         background-color:#0761F5;
          color:white;
          font-size:15px;
          font-weight:bold;
@@ -39,8 +40,8 @@
 
      .pbot0{
          width : 90px;
-         height : 70px;
-         background-color:blue;
+         height : 68px;
+         background-color:#0761F5;
          color:white;
          border-radius:10%;
          line-height:1.3rem;
@@ -68,8 +69,15 @@
     }
 
     .side-lane1{
-        margin-left:95px;
-        margin-top:-66.5vh;
+      margin-left:7%;
+        margin-top:-30.2%;
+        
+        
+    }
+
+    .lane2{
+        margin-left:37%;
+        margin-top:-39.5%;
     }
 
     .stab1, .stab2, .stab3{
@@ -80,7 +88,8 @@
     }
 
     table{
-        border-collapse: collapse
+        border-collapse: collapse;
+        overflow:hidden;
     }
     .stab1, .stab2, .stab3, td, th{
         border:1px solid black;        
@@ -90,18 +99,32 @@
     .stab1, .stab2, .stab3{
         width:31%;
     }
+    
+    .stab1{
+      margin-top:3px;
 
-    .lane2{
-        margin-left:37%;
-        margin-top:-85.3vh;
     }
+
+     .stab2{
+       margin-top:6px;
+     }
+
+     .stab3{
+       margin-top:-9px;
+     }
+
+    .tot{
+      background-color:yellow;
+    }
+    
 
     .lane2t1, .lane2t2{
         background-color:white;
         text-align:left;
-        font-size:12px;
+        font-size:11.5px;
         width:62%;
-        font-weight:small;
+        height:150px;
+         
         border-radius:10px;
         
     }
@@ -111,18 +134,24 @@
         padding:0px;
     }
 
-    .divlane2{
-        margin-top:-40px;
-    }
+  .lane2t1{
+    margin-top:0.5%;
+  }
+   .lane2t2{
+     margin-top:1%;
+   }
 
+  .lane2t1 td{
+    padding:1px;
+  }
+
+  .lane2t2 td{
+    padding:1px;
+  }
+   
 
     </style>
-
-<script>
-
-
-</script>
-    
+ 
 
 </head>
 <body>
@@ -131,14 +160,14 @@
 
 
         <!-- top buttons-->
-        <div id="top-buttons">
-            <span class="sbot0">   <button class="bot0" type="button" disabled=true>ERP<br>  <span class="dot"> </span></button>   </span>
-            <span class="sbot1">  <button class="bot1" type="button"  disabled=true>BI<br>  <span class="dot"> </span></button>   </span> 
-            <span class="sbot2">  <button class="bot2" type="button"  disabled=true>F&R<br>  <span class="dot"> </span></button>  </span>
-            <span class="sbot3">  <button class="bot3" type="button"  disabled=true>CAR<br>  <span class="dot"> </span></button>  </span>
-            <span class="sbot4">  <button class="bot4" type="button"  disabled=true>EFI<br>  <span class="dot"> </span></button>  </span>
-            <span class="sbot5">  <button class="bot5" type="button"  disabled=true>CCI<br>  <span class="dot"> </span></button>  </span>
-            <span class="sbot6">  <button class="bot6" type="button"  disabled=true>GTS<br>  <span class="dot"> </span></button>  </span>
+        <div id="topbuttons">
+            <span class="sbot0">   <button class="bot0" type="button" disabled=true>ERP<br>  <span class="dot" style="background-color:red"> </span></button>   </span>
+            <span class="sbot1">  <button class="bot1" type="button"  disabled=true>BI<br>  <span class="dot" style="background-color:red"> </span></button>   </span> 
+            <span class="sbot2">  <button class="bot2" type="button"  disabled=true>F&R<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
+            <span class="sbot3">  <button class="bot3" type="button"  disabled=true>CAR<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
+            <span class="sbot4">  <button class="bot4" type="button"  disabled=true>EFI<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
+            <span class="sbot5">  <button class="bot5" type="button"  disabled=true>CCI<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
+            <span class="sbot6">  <button class="bot6" type="button"  disabled=true>GTS<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
 
            
         </div>
@@ -146,32 +175,32 @@
 
 
         <!-- Side buttons starts-->
-        <div id="side-buttons">
-            <div class="psbot0 "> <button class="pbot0 sbadjust" type="button"> F&R <br> 
-                    <span class="dot"> </span><br>
+        <div id="sbut0" class="side-buttons ">
+            <div   class="psbot0 "> <button class="pbot0 sbadjust" type="button"> F&R <br> 
+                    <span   class="dot" style="background-color:red"> </span><br>
                     <span>SLA</span> 
                    </button> 
             </div>
 
 
             <div class="psbot0"> <button class="pbot0" type="button"> BI <br> 
-                     <span class="dot"> </span><br>
+                     <span class="dot" style="background-color:red"> </span><br>
                      <span>SLA</span> 
                  </button> 
             </div>
 
           <div class="psbot0"> <button class="pbot0" type="button"> COM <br> 
-                   <span class="dot"> </span><br>
+                   <span class="dot" style="background-color:red"> </span><br>
                </button> 
           </div>
 
           <div class="psbot0"> <button class="pbot0" type="button"> F&R - MTR <br> 
-                 <span class="dot"> </span><br>
+                 <span class="dot" style="background-color:red"> </span><br>
                 </button> 
           </div>
 
           <div class="psbot0"> <button class="pbot0" type="button"> PICK TICKET <br> 
-                  <span class="dot"> </span><br>
+                  <span class="dot" style="background-color:red"> </span><br>
                 </button> 
           </div>
 
@@ -183,19 +212,19 @@
 <!-- Side Lane1  starts here--> 
            <div class="side-lane1">
                <div>
-                   <textarea  class="l1-textarea" rows=6 cols=52 style="">
+                   <textarea  class="l1-textarea" rows=6 cols=52  >
 
                    </textarea>
                </div>
                  
                <div>
-                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.4%">
+                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.3%">
 
                    </textarea>
                </div>
 
                <div>
-                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.6%">
+                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.4%">
 
                    </textarea>
                </div>
@@ -203,7 +232,7 @@
         <!-- Lane 1 table starts-->       
 
                <table  class="stab1" >
-                   <tr>
+                   <tr style='background-color:#ADD8E6'>
                        <th>Job</th>
                        <th>Duration</th>
                        <th contenteditable="true">Completion time(02/21/2019)</th>
@@ -228,7 +257,7 @@
                <!----->
 
                <table class="stab2" contenteditable="true" >
-                    <tr>
+                    <tr style='background-color:#ADD8E6'>
                        <td rowspan="3">DC</td>
                        <td rowspan="3">Stores</td>
                       <td colspan="4">SAP pick ticket generation</td>
@@ -236,7 +265,7 @@
                       
                     </tr>
                     
-                    <tr>
+                    <tr style='background-color:#ADD8E6'>
                       <td>Time of</td>
                       <td>Time of</td>
                       <td rowspan="2">Pick ticket couts</td>
@@ -246,7 +275,7 @@
                       <td rowspan="2">Pick ticket couts</td>
                     </tr>
                     
-                    <tr>
+                    <tr style='background-color:#ADD8E6'>
                       <td>Start </td>
                       <td>Completion </td>
                       <td>Start </td>
@@ -276,7 +305,7 @@
         <div class="bottables">
             &nbsp
              <table class="stab3"  contenteditable="true" style="width:36%">
-                     <tr>
+                     <tr style='background-color:#C0C0C0'>
                        <th>Systems</th> <th>PW5</th> <th>PS7</th> <th>PF7</th>
                        <th>PS1</th> <th>PW1</th> <th>PC7</th> <th>PC9</th>
                        <th>PG0</th> <th>PG1</th> <th>PJA</th> <th>PR7</th>
@@ -286,7 +315,7 @@
                      </tr>
                      
                      <tr>
-                       <th>Cancelled Jobs</th> <td>NA</td> <td>1</td> <td>2</td>
+                       <th style='background-color:#ADD8E6'>Cancelled Jobs</th> <td>NA</td> <td>1</td> <td>2</td>
                        <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                        <td>7</td> <td>8</td> <td>9</td> <td>10</td>
                        <td>11</td> <td>12</td> 
@@ -294,7 +323,7 @@
                      </tr>
                      
                      <tr>
-                       <th>ABAB Dumps</th> <td>NA</td> <td>1</td> <td>2</td>
+                       <th style='background-color:#ADD8E6'>ABAB Dumps</th> <td>NA</td> <td>1</td> <td>2</td>
                        <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                        <td>7</td> <td>8</td> <td>9</td> <td>10</td>
                        <td>11</td> <td>12</td> 
@@ -306,7 +335,7 @@
  
  
                    <div>
-                         <textarea class="l1-textarea" rows=4 cols=66>
+                         <textarea class="l1-textarea" rows=4 cols=66 style="margin-top:0.3%">
       
                          </textarea>
                      </div>
@@ -393,7 +422,7 @@ HPSM: Backlog as of 09:00 EST - 98
                           <td></td> <td></td> <td></td> <td></td>
                         </tr>
                         
-                        <tr>
+                        <tr class="tot">
                           <td>Grand Total</td> <td></td> <td></td> <td></td>
                           <td></td> <td></td> <td></td> <td></td>
                         </tr>
@@ -401,8 +430,12 @@ HPSM: Backlog as of 09:00 EST - 98
                       
 
                      <div class="divlane2">
-                         <p class=dlanet2 style="text-align:center">HPSM Incidents - TCS Ageing</p>
+                         
                       <table contenteditable="true" class="lane2t2">
+                            <tr>
+                              <td colspan="8" style="text-align:center;font-size:13px">HPSM INCIDENTS - TCS Ageing</td>
+                            </tr>
+
                             <tr>
                                     <td>Assignment</td> <td>A<=2</td> <td>B>2</td> <td>C>5</td>
                                     <td>D>14</td> <td>E>21</td> <td>F>30</td> <td>Grand Total</td>
@@ -463,7 +496,7 @@ HPSM: Backlog as of 09:00 EST - 98
                                     <td></td> <td></td> <td></td> <td></td>
                                   </tr>
                                   
-                                  <tr>
+                                  <tr class="tot">
                                     <td>Grand Total</td> <td></td> <td></td> <td></td>
                                     <td></td> <td></td> <td></td> <td></td>
                                   </tr>
@@ -490,13 +523,49 @@ HPSM: Backlog as of 09:00 EST - 98
 
      
     <script>
-            document.getElementById("redone").addEventListener('click',colorchanger);
-            function colorchanger(){
-                console.log
-                ('event listener working');
-                this.style.backgroundColor="red";
-            }
-          </script>
+
+              var sidebuttons =  document.getElementById("sbut0");
+              sidebuttons.addEventListener('click',colorchanger,true);
+
+              var topbut=  document.getElementById("topbuttons");
+              topbut.addEventListener('click',colorchanger,true);
+
+              
+                function colorchanger(event){
+
+                  if(event.target.style.backgroundColor =="red"){
+                   console.log('true');
+                  event.target.style = 'background-color: lime';
+                  return;
+                }
+
+                if(event.target.style.backgroundColor =="lime"){
+                  console.log('true')
+                  event.target.style = 'background-color : yellow';
+                  return;
+                }
+
+                if(event.target.style.backgroundColor =="yellow"){
+                  event.target.style = 'background-color : red';
+                  return;
+                }
+
+                }
+               
+
+                
+              
+               
+
+
+               
+             
+                      
+
+                
+                
+             
+    </script>
 
 
            
