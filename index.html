@@ -2,6 +2,8 @@
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAP Dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src='scr.js'></script>
     <style>
       
       body{
@@ -216,26 +218,32 @@
 <!-- Side Lane1  starts here--> 
            <div class="side-lane1">
                <div>
-                   <textarea  class="l1-textarea" rows=6 cols=52  >
-
+                   <textarea  id='tx1' class="l1-textarea" rows=6 cols=52  >
+* No Stores failed
+* Completion time for EST store : 12:16:02 AM EST
+* Completion time for CST store : 12:14:39 AM EST
+* Completion time for CST store : 11:05:12 PM EST
+* Completion time for CST store : 05:18:10 AM EST
                    </textarea>
                </div>
                  
                <div>
-                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.3%">
-
+                   <textarea  id='tx2' class="l1-textarea" rows=4 cols=52 style="margin-top:0.3%">
+* All loads completed
+* Refer to appendix slide for validation summary
                    </textarea>
                </div>
 
                <div>
-                   <textarea class="l1-textarea" rows=4 cols=52 style="margin-top:0.4%">
-
+                   <textarea id='tx3' class="l1-textarea" rows=4 cols=52 style="margin-top:0.4%">
+ *Batch Jobs completed successfully without any issues.
+ * TAXWARE connectivity test result PASSED
                    </textarea>
                </div>
                
         <!-- Lane 1 table starts-->       
 
-               <table  class="stab1" >
+               <table  id="tb1" class="stab1" >
                    <tr style='background-color:#ADD8E6'>
                        <th>Job</th>
                        <th>Duration</th>
@@ -286,7 +294,7 @@
                       <td>Completion </td>
                     </tr>
                     
-                    <tr>
+                    <tr id='itb1'>
                       <td>1</td>
                       <td>2</td>
                       <td>3</td>
@@ -308,7 +316,7 @@
         <!-- Lane 1 but no borders-->
         <div class="bottables">
             &nbsp
-             <table class="stab3"  contenteditable="true" style="width:36%">
+             <table id='itb2' class="stab3"  contenteditable="true" style="width:36%">
                      <tr style='background-color:#C0C0C0'>
                        <th>Systems</th> <th>PW5</th> <th>PS7</th> <th>PF7</th>
                        <th>PS1</th> <th>PW1</th> <th>PC7</th> <th>PC9</th>
@@ -318,7 +326,7 @@
                        
                      </tr>
                      
-                     <tr>
+                     <tr >
                        <th style='background-color:#ADD8E6'>Cancelled Jobs</th> <td>NA</td> <td>1</td> <td>2</td>
                        <td>3</td> <td>4</td> <td>5</td> <td>6</td>
                        <td>7</td> <td>8</td> <td>9</td> <td>10</td>
@@ -339,8 +347,9 @@
  
  
                    <div>
-                         <textarea class="l1-textarea" rows=4 cols=66 style="margin-top:0.3%">
-      
+                         <textarea id='tx4' class="l1-textarea" rows=4 cols=66 style="margin-top:0.3%">
+                       Key Call Outs
+BI system is down due to GCP migration. Hence, there are no BI loads for the day
                          </textarea>
                      </div>
         </div>
@@ -353,7 +362,7 @@
 
 
                 <div>
-<textarea class="l1-textarea" style="text-align:left;font-size:12px"rows=7 cols=70>
+<textarea id='tx5' class="l1-textarea" style="text-align:left;font-size:12px"rows=7 cols=70>
                 HPSM Incidents
 HPSM: Backlog as of 09:00 EST - 98
         • Focus on Incident #<=2 #>2 #>5, #>14, #>21 and #>30
@@ -365,15 +374,17 @@ HPSM: Backlog as of 09:00 EST - 98
 
 
 
-                <table contenteditable="true" class="lane2t1">
+                <table  contenteditable="true" class="lane2t1">
                         <tr>
                           <td>Assignment</td> <td>A<=2</td> <td>B>2</td> <td>C>5</td>
                           <td>D>14</td> <td>E>21</td> <td>F>30</td> <td>Grand Total</td>
                         </tr>
-                        
+
+
+                        <tbody id="tb3">
                         <tr>
-                          <td>FOUNDATION CANADA</td> <td></td> <td></td> <td></td>
-                          <td></td> <td></td> <td></td> <td></td>
+                          <td>FOUNDATION CANADA</td> <td>1</td> <td>2</td> <td>3</td>
+                          <td>4</td> <td>5</td> <td>6</td> <td>7</td>
                         </tr>
                         
                         <tr>
@@ -430,6 +441,8 @@ HPSM: Backlog as of 09:00 EST - 98
                           <td>Grand Total</td> <td></td> <td></td> <td></td>
                           <td></td> <td></td> <td></td> <td></td>
                         </tr>
+
+                      </tbody>
                       </table>
                       
 
@@ -445,9 +458,10 @@ HPSM: Backlog as of 09:00 EST - 98
                                     <td>D>14</td> <td>E>21</td> <td>F>30</td> <td>Grand Total</td>
                                   </tr>
                                   
+                                  <tbody id="tb4">
                                   <tr>
-                                    <td>FOUNDATION CANADA</td> <td></td> <td></td> <td></td>
-                                    <td></td> <td></td> <td></td> <td></td>
+                                    <td>FOUNDATION CANADA</td> <td>7</td> <td>8</td> <td>9</td>
+                                    <td>10</td> <td>11</td> <td>12</td> <td>13</td>
                                   </tr>
                                   
                                   <tr>
@@ -504,6 +518,8 @@ HPSM: Backlog as of 09:00 EST - 98
                                     <td>Grand Total</td> <td></td> <td></td> <td></td>
                                     <td></td> <td></td> <td></td> <td></td>
                                   </tr>
+
+                                </tbody>
                           </table>
                         </div>
     
@@ -525,7 +541,7 @@ HPSM: Backlog as of 09:00 EST - 98
 
 
 
-     
+  
     <script>
 
               var sidebuttons =  document.getElementById("sbut0");
@@ -538,13 +554,13 @@ HPSM: Backlog as of 09:00 EST - 98
                 function colorchanger(event){
 
                   if(event.target.style.backgroundColor =="red"){
-                   console.log('true');
+                   //console.log('true');
                   event.target.style = 'background-color: lime';
                   return;
                 }
 
                 if(event.target.style.backgroundColor =="lime"){
-                  console.log('true')
+                  //console.log('true')
                   event.target.style = 'background-color : yellow';
                   return;
                 }
@@ -570,6 +586,8 @@ HPSM: Backlog as of 09:00 EST - 98
                 
              
     </script>
+
+ <button id="clikme">POST</button>
 
 
            
