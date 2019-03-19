@@ -1,6 +1,87 @@
 $(document).ready(function(){
    
 
+   alert('Data is synced with latest one')
+   $.ajax({
+      url: "https://api.mlab.com/api/1/databases/productstutorial/collections/deck?apiKey=MXi2J3ryTDKRQF_lqkAoNYJSOI7n6-tw",
+      
+      type: 'GET',
+      crossDomain: true,
+      xhrFields: {
+          withCredentials: true
+      },
+      
+       
+      success: function(data){
+         console.log(data);
+          
+
+         $('#tx1').val(data[0][1]);
+          $('#tx2').val(data[0][2]);
+          $('#tx3').val(data[0][3]);
+          $('#tx4').val(data[0][4]);
+          $('#tx5').val(data[0][5]);
+
+
+          //tb1
+          $('#tb1 td').each(function(index){
+             $(this).text(data[0][6][index]);
+          
+        })
+
+
+        //tb2   
+    $('#itb1 td').each(function(index){
+          $(this).text(data[0][7][index]);
+      
+    })
+
+   
+
+       //tb3     
+    $('#itb2 td').each(function(index){
+         $(this).text(data[0][8][index]);
+      
+    })
+
+    
+
+   
+     //tb4    
+    $('#tb3 td').each(function(index){
+         $(this).text(data[0][9][index]);
+      
+    })
+
+
+    //tb5
+    $('#tb4 td').each(function(index){
+          $(this).text(data[0][10][index]);
+     })
+      
+ 
+          
+      }
+   })
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   /**
+    * Below logic is for posting 
+    */
+
 
    $("#clikme").click(function(){
 
