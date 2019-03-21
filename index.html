@@ -167,13 +167,13 @@
 
         <!-- top buttons-->
         <div id="topbuttons">
-            <span class="sbot0">   <button class="bot0" type="button" disabled=true>ERP<br>  <span class="dot" style="background-color:red"> </span></button>   </span>
-            <span class="sbot1">  <button class="bot1" type="button"  disabled=true>BI<br>  <span class="dot" style="background-color:red"> </span></button>   </span> 
-            <span class="sbot2">  <button class="bot2" type="button"  disabled=true>F&R<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
-            <span class="sbot3">  <button class="bot3" type="button"  disabled=true>CAR<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
-            <span class="sbot4">  <button class="bot4" type="button"  disabled=true>EFI<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
-            <span class="sbot5">  <button class="bot5" type="button"  disabled=true>CCI<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
-            <span class="sbot6">  <button class="bot6" type="button"  disabled=true>GTS<br>  <span class="dot" style="background-color:red"> </span></button>  </span>
+            <span class="sbot0">   <button class="bot0" type="button" disabled=true>ERP<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>   </span>
+            <span class="sbot1">  <button class="bot1" type="button"  disabled=true>BI<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>   </span> 
+            <span class="sbot2">  <button class="bot2" type="button"  disabled=true>F&R<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot3">  <button class="bot3" type="button"  disabled=true>CAR<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot4">  <button class="bot4" type="button"  disabled=true>EFI<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot5">  <button class="bot5" type="button"  disabled=true>CCI<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot6">  <button class="bot6" type="button"  disabled=true>GTS<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
 
            
         </div>
@@ -183,30 +183,30 @@
         <!-- Side buttons starts-->
         <div id="sbut0" class="side-buttons ">
             <div   class="psbot0 "> <button class="pbot0 sbadjust" type="button"> F&R <br> 
-                    <span   class="dot" style="background-color:red"> </span><br>
+                    <span id='stbot1'  class="dot" style="background-color:lime"> </span><br>
                     <span>SLA</span> 
                    </button> 
             </div>
 
 
             <div class="psbot0"> <button class="pbot0" type="button"> BI <br> 
-                     <span class="dot" style="background-color:red"> </span><br>
+                     <span id='stbot1' class="dot" style="background-color:lime"> </span><br>
                      <span>SLA</span> 
                  </button> 
             </div>
 
           <div class="psbot0"> <button class="pbot0" type="button"> COM <br> 
-                   <span class="dot" style="background-color:red"> </span><br>
+                   <span id='stbot1' class="dot" style="background-color:lime"> </span><br>
                </button> 
           </div>
 
           <div class="psbot0"> <button class="pbot0" type="button"> F&R - MTR <br> 
-                 <span class="dot" style="background-color:red"> </span><br>
+                 <span id='stbot1' class="dot" style="background-color:lime"> </span><br>
                 </button> 
           </div>
 
           <div class="psbot0"> <button class="pbot0" type="button"> PICK TICKET <br> 
-                  <span class="dot" style="background-color:red"> </span><br>
+                  <span  id='stbot1' class="dot" style="background-color:lime"> </span><br>
                 </button> 
           </div>
 
@@ -381,7 +381,7 @@ HPSM: Backlog as of 09:00 EST - 98
                         </tr>
 
 
-                        <tbody id="tb3">
+                        <tbody id="tb3" class="summation">
                         <tr>
                           <td>FOUNDATION CANADA</td> <td>1</td> <td>2</td> <td>3</td>
                           <td>4</td> <td>5</td> <td>6</td> <td>7</td>
@@ -458,7 +458,7 @@ HPSM: Backlog as of 09:00 EST - 98
                                     <td>D>14</td> <td>E>21</td> <td>F>30</td> <td>Grand Total</td>
                                   </tr>
                                   
-                                  <tbody id="tb4">
+                                  <tbody id="tb4" class="summation">
                                   <tr>
                                     <td>FOUNDATION CANADA</td> <td>7</td> <td>8</td> <td>9</td>
                                     <td>10</td> <td>11</td> <td>12</td> <td>13</td>
@@ -515,7 +515,7 @@ HPSM: Backlog as of 09:00 EST - 98
                                   </tr>
                                   
                                   <tr class="tot">
-                                    <td>Grand Total</td> <td></td> <td></td> <td></td>
+                                    <td>Grand Total</td> <td id="1"></td> <td></td> <td></td>
                                     <td></td> <td></td> <td></td> <td></td>
                                   </tr>
 
@@ -587,7 +587,11 @@ HPSM: Backlog as of 09:00 EST - 98
              
     </script>
 
+<br>
+<hr>
+<button id='sum'>Click to Sum</button><span>&nbsp</span>>
  <button id="clikme">POST</button>
+ 
 
 
            

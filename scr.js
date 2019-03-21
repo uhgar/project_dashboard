@@ -60,13 +60,106 @@ $(document).ready(function(){
      })
       
  
+      
+     var y = document.querySelectorAll("#stbot1");
+     var j;
+     for (j = 0; j < y.length; j++) {
+        console.log(data[0][11][j])
+        y[j].style.backgroundColor=data[0][11][j];
+     }
+     //console.log(boxColors)
+               
+           
+ 
           
-      }
+   }
    })
   
 
 
 
+   /******************************************************* */
+/** Logics to sum up the table values both horizontal and vertical */
+
+$('#sum').click(function(){
+
+console.log('inside sum')
+var total  = 0;
+        var count=0;
+        var loopmonitor =2;
+        var tempcount = 2;
+        var temptotal=0;
+
+        
+
+
+            $('.summation td').each(function(index){
+
+                ++count;
+
+                if(count%8 ==0){
+
+
+                   if(total==0){
+                        total=0;
+                        return;
+                    }
+                    
+                     $(this).text(total)
+                    total=0;
+                    return;
+                }
+                
+
+
+                var x   = parseInt($(this).text(),10);
+        
+            if(!isNaN(x)){
+                total+=x;
+            }            
+
+           // console.log(temptotal)
+
+            });
+            
+
+            
+            for(i=0;i<1;i++){
+                count =0;
+                temptotal=0;
+                countmonitor =1;
+                tempcount=loopmonitor;
+                $('.summation td').each(function(index){
+                             ++count; 
+                             if(count!=tempcount){
+                                 return;
+                             }  
+                    var x   = parseInt($(this).text(),10);
+
+                   // console.log('x '+x)
+
+                                if(!isNaN(x)){
+                                 temptotal+=x;  
+                                }                             
+                         tempcount+=8;
+                       
+
+                              
+
+         })
+                         $('#1').text(temptotal);
+                     //    console.log('temptotal '+temptotal)
+                           ++loopmonitor;
+                           
+
+                          
+
+            }
+
+
+         })
+
+     /*************************end of table summation logic****************************** */
 
 
 
@@ -142,6 +235,15 @@ $(document).ready(function(){
     })
       
 
+   var boxColors = [];
+    var x = document.querySelectorAll("#stbot1");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      boxColors.push((x[i].style.backgroundColor));
+    }
+    console.log(boxColors)
+              
+          
 
 
 
@@ -164,8 +266,9 @@ $(document).ready(function(){
          textboxObjs['8']={...tableThree};
          textboxObjs['9']={...tableFour};
          textboxObjs['10']={...tableFive};
+         textboxObjs['11']={...boxColors};
 
-         console.log(textboxObjs);
+         //console.log(textboxObjs);
 
 
          //console.log(JSON.stringify(textboxObjs)); 
