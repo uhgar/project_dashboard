@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Dashboard</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src='scr.js'></script>
+    <style>
+      
+      body{
+        box-sizing: border-box;
+         background-color:black;
+     }
+      .sbot0, .sbot1, .sbot2, .sbot3,.sbot4, .sbot5, .sbot6{
+           padding:0px 20px 0px 20px;
+           
+      }
+
+    
+     .bot0, .bot1, .bot2, .bot3,.bot4, .bot5, .bot6{
+         display:inline-block;
+         
+         width:90px;
+         height:90px;
+         line-height:normal;
+         border-radius:50%;
+         text-align:center;
+         text-decoration:none;
+         background-color:#0761F5;
+         color:white;
+         font-size:15px;
+         font-weight:bold;
+         border:0;
+           
+     }
+
+     .dot{
+         width:15px;
+         height:15px;
+         background-color:red;
+         border-radius:50%;
+         display:inline-block;
+     }
+
+
+     .pbot0{
+         width : 90px;
+         height : 68px;
+         background-color:#0761F5;
+         color:white;
+         border-radius:10%;
+         line-height:1.3rem;
+         text-align:center;
+         text-decoration:none;
+         font-size:11px;
+         font-weight:bold;
+         border:0;
+
+     }
+
+     .pbot0.sbadjust{
+         height:90px;
+     }
+
+     .psbot0{
+         padding:5px 0px 5px 0px;
+     }
+
+
+    .l1-textarea{
+        resize:none;
+        border-radius:10px;
+        text-align:left;
+        line-height:normal;
+    }
+
+    .side-lane1{
+      margin-left:7%;
+        margin-top:-30.2%;
+        
+        
+    }
+
+    .lane2{
+        margin-left:37%;
+        margin-top:-40%;
+        position:relative;
+    }
+
+    .stab1, .stab2, .stab3{
+        background-color:white;
+        text-align:center;
+        font-size:12px;
+       
+    }
+
+    table{
+        border-collapse: collapse;
+        overflow:hidden;
+    }
+    .stab1, .stab2, .stab3, td, th{
+        border:1px solid black;        
+        padding:0px;
+    }
+
+    .stab1, .stab2, .stab3{
+        width:31%;
+    }
+    
+    .stab1{
+      margin-top:3px;
+
+    }
+
+     .stab2{
+       margin-top:6px;
+     }
+
+     .stab3{
+       margin-top:-9px;
+     }
+
+    .tot{
+      background-color:yellow;
+    }
+    
+
+    .lane2t1, .lane2t2{
+        background-color:white;
+        text-align:left;
+        font-size:11.5px;
+        width:62%;
+        height:150px;
+         
+        border-radius:10px;
+        
+    }
+    
+    .lane2t1, .lane2t2, td , th{
+        border:1px solid black;        
+        padding:0px;
+    }
+
+  .lane2t1{
+    margin-top:0.5%;
+  }
+   .lane2t2{
+     margin-top:1%;
+   }
+
+  .lane2t1 td{
+    padding:1px;
+  }
+
+  .lane2t2 td{
+    padding:1px;
+  }
+   
+
+    </style>
+ 
+
+</head>
+<body>
+    <!-- paren div-->
+    <div>
+
+
+        <!-- top buttons-->
+        <div id="topbuttons">
+            <span class="sbot0">   <button class="bot0" type="button" disabled=true>ERP<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>   </span>
+            <span class="sbot1">  <button class="bot1" type="button"  disabled=true>BI<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>   </span> 
+            <span class="sbot2">  <button class="bot2" type="button"  disabled=true>F&R<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot3">  <button class="bot3" type="button"  disabled=true>CAR<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot4">  <button class="bot4" type="button"  disabled=true>EFI<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot5">  <button class="bot5" type="button"  disabled=true>CCI<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+            <span class="sbot6">  <button class="bot6" type="button"  disabled=true>GTS<br>  <span id='stbot1' class="dot" style="background-color:lime"> </span></button>  </span>
+
+           
+        </div>
+        <!-- xxxx -->
+
+
+        <!-- Side buttons starts-->
+        <div id="sbut0" class="side-buttons ">
+            <div   class="psbot0 "> <button class="pbot0 sbadjust" type="button"> F&R <br> 
+                    <span id='stbot1'  class="dot" style="background-color:lime"> </span><br>
+                    <span>SLA</span> 
+                   </button> 
+            </div>
+
+
+            <div class="psbot0"> <button class="pbot0" type="button"> BI <br> 
+                     <span id='stbot1' class="dot" style="background-color:lime"> </span><br>
+                     <span>SLA</span> 
+                 </button> 
+            </div>
+
+          <div class="psbot0"> <button class="pbot0" type="button"> COM <br> 
+                   <span id='stbot1' class="dot" style="background-color:lime"> </span><br>
+               </button> 
+          </div>
+
+          <div class="psbot0"> <button class="pbot0" type="button"> F&R - MTR <br> 
+                 <span id='stbot1' class="dot" style="background-color:lime"> </span><br>
+                </button> 
+          </div>
+
+          <div class="psbot0"> <button class="pbot0" type="button"> PICK TICKET <br> 
+                  <span  id='stbot1' class="dot" style="background-color:lime"> </span><br>
+                </button> 
+          </div>
+
+        </div>
+        <!-- xxxx-->
+
+
+
+<!-- Side Lane1  starts here--> 
+           <div class="side-lane1">
+               <div>
+                   <textarea  id='tx1' class="l1-textarea" rows=6 cols=52  >
+* No Stores failed
+* Completion time for EST store : 12:16:02 AM EST
+* Completion time for CST store : 12:14:39 AM EST
+* Completion time for CST store : 11:05:12 PM EST
+* Completion time for CST store : 05:18:10 AM EST
+                   </textarea>
+               </div>
+                 
+               <div>
+                   <textarea  id='tx2' class="l1-textarea" rows=4 cols=52 style="margin-top:0.3%">
+* All loads completed
+* Refer to appendix slide for validation summary
+                   </textarea>
+               </div>
+
+               <div>
+                   <textarea id='tx3' class="l1-textarea" rows=4 cols=52 style="margin-top:0.4%">
+ *Batch Jobs completed successfully without any issues.
+ * TAXWARE connectivity test result PASSED
+                   </textarea>
+               </div>
+               
+        <!-- Lane 1 table starts-->       
+
+               <table  id="tb1" class="stab1" >
+                   <tr style='background-color:#ADD8E6'>
+                       <th>Job</th>
+                       <th>Duration</th>
+                       <th contenteditable="true">Completion time(02/21/2019)</th>
+                   </tr>
+                   <tr>
+                       <td>OFC</td>
+                       <td contenteditable="true">47</td>
+                       <td contenteditable="true">2:19:23</td>
+                   </tr>
+                   <tr>
+                       <td>GR FC</td>
+                       <td contenteditable="true">25</td>
+                       <td contenteditable="true">3:02:10</td>
+                   </tr>
+                   <tr>
+                       <td>STOCK PROJECTION</td>
+                       <td contenteditable="true">180</td>
+                       <td contenteditable="true">5:02:11</td>
+                   </tr>
+               </table>
+
+               <!----->
+
+               <table class="stab2" contenteditable="true" >
+                    <tr style='background-color:#ADD8E6'>
+                       <td rowspan="3">DC</td>
+                       <td rowspan="3">Stores</td>
+                      <td colspan="4">SAP pick ticket generation</td>
+                      <td colspan="3">IWS pick ticket Bridging</td>
+                      
+                    </tr>
+                    
+                    <tr style='background-color:#ADD8E6'>
+                      <td>Time of</td>
+                      <td>Time of</td>
+                      <td rowspan="2">Pick ticket couts</td>
+                      <td rowspan="2">Pick ticket couts</td>
+                      <td>Time of</td>
+                      <td>Time of</td>
+                      <td rowspan="2">Pick ticket couts</td>
+                    </tr>
+                    
+                    <tr style='background-color:#ADD8E6'>
+                      <td>Start </td>
+                      <td>Completion </td>
+                      <td>Start </td>
+                      <td>Completion </td>
+                    </tr>
+                    
+                    <tr id='itb1'>
+                      <td>1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>4</td>
+                      <td>5</td>
+                      <td>6</td>
+                      <td>7</td>
+                      <td>8</td>
+                      <td>9</td>
+                    </tr>
+                  </table>
+                   
+             <!---->          
+             
+
+           </div>
+        <!---->
+
+        <!-- Lane 1 but no borders-->
+        <div class="bottables">
+            &nbsp
+             <table id='itb2' class="stab3"  contenteditable="true" style="width:36%">
+                     <tr style='background-color:#C0C0C0'>
+                       <th>Systems</th> <th>PW5</th> <th>PS7</th> <th>PF7</th>
+                       <th>PS1</th> <th>PW1</th> <th>PC7</th> <th>PC9</th>
+                       <th>PG0</th> <th>PG1</th> <th>PJA</th> <th>PR7</th>
+                       <th>PR8</th> <th>PWM</th> 
+                       
+                       
+                     </tr>
+                     
+                     <tr >
+                       <th style='background-color:#ADD8E6'>Cancelled Jobs</th> <td>NA</td> <td>1</td> <td>2</td>
+                       <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                       <td>7</td> <td>8</td> <td>9</td> <td>10</td>
+                       <td>11</td> <td>12</td> 
+                       
+                     </tr>
+                     
+                     <tr>
+                       <th style='background-color:#ADD8E6'>ABAB Dumps</th> <td>NA</td> <td>1</td> <td>2</td>
+                       <td>3</td> <td>4</td> <td>5</td> <td>6</td>
+                       <td>7</td> <td>8</td> <td>9</td> <td>10</td>
+                       <td>11</td> <td>12</td> 
+                       
+                     </tr>
+                     
+                   </table>
+ 
+ 
+ 
+                   <div>
+                         <textarea id='tx4' class="l1-textarea" rows=4 cols=66 style="margin-top:0.3%">
+                       Key Call Outs
+BI system is down due to GCP migration. Hence, there are no BI loads for the day
+                         </textarea>
+                     </div>
+        </div>
+ 
+ <!--     Side lane one ends here-->
+ <!-- side lane2 begins-->
+
+         <div class="lane2">
+
+
+
+                <div>
+<textarea id='tx5' class="l1-textarea" style="text-align:left;font-size:12px"rows=7 cols=70>
+                HPSM Incidents
+HPSM: Backlog as of 09:00 EST - 98
+        • Focus on Incident #<=2 #>2 #>5, #>14, #>21 and #>30
+        • Count as on 02/20 was: 197
+        • Tickets transferred to TCS Inbox : 17
+        • Incident closed in last 2 days  : 225
+</textarea>                       
+                </div>
+
+
+
+                <table  contenteditable="true" class="lane2t1">
+                        <tr>
+                          <td>Assignment</td> <td>A<=2</td> <td>B>2</td> <td>C>5</td>
+                          <td>D>14</td> <td>E>21</td> <td>F>30</td> <td>Grand Total</td>
+                        </tr>
+
+
+                        <tbody id="tb3" class="summation">
+                        <tr>
+                          <td>FOUNDATION CANADA</td> <td>1</td> <td>2</td> <td>3</td>
+                          <td>4</td> <td>5</td> <td>6</td> <td>7</td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SCORE BI</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SCORE FTP AP</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SCORE SALES TO CASH</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>CANADA ECOMMERCE IT</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SAP SECURITY</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SCORE FTP INVENTORY ORDERING</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SAP CANADA LOYALTY</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>GLOBAL TRADE SERVICES SUPPORT</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SAP BASIS SUPPORT</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr>
+                          <td>SCORE F AND R IT</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+                        
+                        <tr class="tot">
+                          <td>Grand Total</td> <td></td> <td></td> <td></td>
+                          <td></td> <td></td> <td></td> <td></td>
+                        </tr>
+
+                      </tbody>
+                      </table>
+                      
+
+                     <div class="divlane2">
+                         
+                      <table contenteditable="true" class="lane2t2">
+                            <tr>
+                              <td colspan="8" style="text-align:center;font-size:13px"><b>HPSM INCIDENTS - TCS Ageing</b></td>
+                            </tr>
+
+                            <tr>
+                                    <td>Assignment</td> <td>A<=2</td> <td>B>2</td> <td>C>5</td>
+                                    <td>D>14</td> <td>E>21</td> <td>F>30</td> <td>Grand Total</td>
+                                  </tr>
+                                  
+                                  <tbody id="tb4" class="summation">
+                                  <tr>
+                                    <td>FOUNDATION CANADA</td> <td>7</td> <td>8</td> <td>9</td>
+                                    <td>10</td> <td>11</td> <td>12</td> <td>13</td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SCORE BI</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SCORE FTP AP</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SCORE SALES TO CASH</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>CANADA ECOMMERCE IT</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SAP SECURITY</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SCORE FTP INVENTORY ORDERING</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SAP CANADA LOYALTY</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>GLOBAL TRADE SERVICES SUPPORT</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SAP BASIS SUPPORT</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr>
+                                    <td>SCORE F AND R IT</td> <td></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+                                  
+                                  <tr class="tot">
+                                    <td>Grand Total</td> <td id="1"></td> <td></td> <td></td>
+                                    <td></td> <td></td> <td></td> <td></td>
+                                  </tr>
+
+                                </tbody>
+                          </table>
+                        </div>
+    
+
+
+         </div>
+ <!--Side lane 2 ends-->
+     
+            
+   
+
+
+
+
+
+    </div><!--main div end-->
+
+    
+
+
+
+  
+    <script>
+
+              var sidebuttons =  document.getElementById("sbut0");
+              sidebuttons.addEventListener('click',colorchanger,true);
+
+              var topbut=  document.getElementById("topbuttons");
+              topbut.addEventListener('click',colorchanger,true);
+
+              
+                function colorchanger(event){
+
+                  if(event.target.style.backgroundColor =="red"){
+                   //console.log('true');
+                  event.target.style = 'background-color: lime';
+                  return;
+                }
+
+                if(event.target.style.backgroundColor =="lime"){
+                  //console.log('true')
+                  event.target.style = 'background-color : yellow';
+                  return;
+                }
+
+                if(event.target.style.backgroundColor =="yellow"){
+                  event.target.style = 'background-color : red';
+                  return;
+                }
+
+                }
+               
+
+                
+              
+               
+
+
+               
+             
+                      
+
+                
+                
+             
+    </script>
+
+<br>
+<hr>
+<button id='sum'>Click to Sum</button><span>&nbsp</span>>
+ <button id="clikme">POST</button>
+ 
+
+
+           
+</body>
+
+</html>
